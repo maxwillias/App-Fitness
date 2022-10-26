@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ImcActivity">
+
+        <TextView
+            style="@style/TextViewForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tbm_desc" />
+
+        <EditText
+            android:id="@+id/editTmbWeight"
+            style="@style/EditTextForm"
+            android:hint="@string/weight" />
+
+        <EditText
+            android:id="@+id/editTmbHeight"
+            style="@style/EditTextForm"
+            android:hint="@string/height" />
+
+        <EditText
+            android:id="@+id/editTmbAge"
+            style="@style/EditTextForm"
+            android:hint="@string/age" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/AutoTextViewForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoLifestyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnTmbSend"
+            style="@style/ButtonForm"
+            android:text="@string/calc" />
+
+
+    </LinearLayout>
+</ScrollView>
