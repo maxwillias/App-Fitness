@@ -25,5 +25,6 @@
     <string name="saved">Registro Salvo com Sucesso!</string>
     <string name="search">Buscar</string>
     <string name="age">Idade</string>
+    <string name="delete_message">Você realmente quer excluir esse item?</string>
 
 </resources>

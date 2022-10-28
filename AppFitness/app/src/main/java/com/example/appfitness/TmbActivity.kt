@@ -53,7 +53,14 @@ class TmbActivity : AppCompatActivity() {
                     Thread{
                         val app = application as App
                         val dao = app.db.calcDao()
-                        dao.insert(Calc(type = "tmb", res = response))
+
+                        val updateId = intent.extras?.getInt("updateId")
+                        if(updateId != null){
+                            dao.update(Calc(id = updateId, type = "tmb", res = response))
+                        } else{
+                            dao.insert(Calc(type = "tmb", res = response))
+                        }
+
                         runOnUiThread{
                             openListActivity()
                         }

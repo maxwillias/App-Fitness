@@ -1,8 +1,6 @@
 package com.example.appfitness.model
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface CalcDao {
@@ -13,4 +11,9 @@ interface CalcDao {
     @Query("SELECT * FROM Calc WHERE type = :type")
     fun getRegisterByType(type: String) : List<Calc>
 
+    @Delete
+    fun delete(calc: Calc): Int
+
+    @Update
+    fun update(calc: Calc)
 }
